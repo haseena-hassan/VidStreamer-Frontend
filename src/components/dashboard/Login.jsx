@@ -4,13 +4,11 @@ import Button from "../common/Button";
 import { useNavigate } from "react-router-dom";
 
 const EMAIL_FIELD = "email";
-const NAME_FIELD = "name";
 const PASSWORD_FIELD = "password";
 
-export default function Signup() {
+export default function Login() {
     const [signupDetails, setSignupDetails] = useState({
         [EMAIL_FIELD]: "",
-        [NAME_FIELD]: "",
         [PASSWORD_FIELD]: ""
     });
 
@@ -28,12 +26,6 @@ export default function Signup() {
     return (
         <div className="signup-container">
             <Input
-                value={signupDetails[NAME_FIELD]}
-                onChange={handleChange}
-                label="Name"
-                id={NAME_FIELD}
-            />
-            <Input
                 value={signupDetails[EMAIL_FIELD]}
                 onChange={handleChange}
                 label="Email"
@@ -47,8 +39,8 @@ export default function Signup() {
                 id={PASSWORD_FIELD}
                 type="password"
             />
-            <Button label="Signup" variant="primary" />
-            <text style={{ fontSize: "14px" }}> Already have an account? <span onClick={() => navigate("/login")} className="link">Login</span></text>
+            <Button label="Login" variant="primary" />
+            <text style={{ fontSize: "14px" }}> New user? <span onClick={() => navigate("/signup")} className="link">Signup</span></text>
         </div>
     )
 }

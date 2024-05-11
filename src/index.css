@@ -69,7 +69,7 @@ code {
   cursor: pointer;
 
   &:hover {
-    background: #CDE8E5;
+    background: #51b6aa;
   }
 }
 
@@ -92,4 +92,26 @@ code {
 
 * {
   box-sizing: border-box;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  border-radius: 8px;
+}
+
+.center-card-grid{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.link{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #4D869C;
+  &:hover {
+    color: #51b6aa;
+  }
 }
